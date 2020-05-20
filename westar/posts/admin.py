@@ -4,18 +4,20 @@ from . import models
 
 # Register your models here.
 
-@admin.register(models.Content)
 class CustomPostAdmin(admin.ModelAdmin):
-    list_display = ("user_id", "description", "createdAt")
-
-
+    #list_display = ("user", "description", "createdAt")
+    pass
 @admin.register(models.Comments)
 class CustomCommentsAdmin(admin.ModelAdmin):
-    list_display = ("user_id", "content_id", "comment", "createdAt", "updatedAt")
+    list_display = ("comment", "content", 'user')
 
+admin.site.register(models.Content, CustomPostAdmin)
 
 @admin.register(models.Like)
 class CustomLikesAdmin(admin.ModelAdmin):
-    list_display = ("user_id", "content_id", "isLike")
+    list_display = ("user", "content", "isLike")
 
+@admin.register(models.Photo)
+class CustomPhoto(admin.ModelAdmin):
+    list_display = ['id', 'image_file', 'createdAt' ,'content']
 

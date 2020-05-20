@@ -20,7 +20,9 @@ from . import views
 
 urlpatterns = [
     path('user', views.UserCreateView.as_view()), #POST 생성
-#   path('user/<int:pk>') 조회, 수정 GET, PUT :userFEED
-    path('user/login', views.UserLoginView.as_view()) #POST LOGIN
+#    path('user_feed', views.UserFeedView.as_view()), #유저 홈 
+    #path('user/<int:pk>'/profile, views.UserFeedView.as_view()), #조회, 수정 GET, PUT :userFEED
+    path('user/login', views.UserLoginView.as_view()), #POST LOGIN
+    path('user/recommend', views.User_recommend.as_view())
 #   path(user/<int:pk>/clear) DEL 삭제
 ]

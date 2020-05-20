@@ -19,6 +19,7 @@ dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 TOKEN_SECRECTKEY = os.environ.get("TOKEN_SECRECTKEY")
 DJANGO_SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+ALGORITHMS =  os.environ.get("ALGORITHMS")
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -45,8 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
-    'posts',
-    'feeds'
+    'posts'
 ]
 
 MIDDLEWARE = [

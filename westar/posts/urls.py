@@ -19,8 +19,10 @@ from django.urls import path, include
 from . import views  
 
 urlpatterns = [
-    path('content', views.ContentsView.as_view()), #생성 POST
-#   path('content/<int:pk>') 조회, 수정 GET, PUT
+    path('content', views.ContentCreateView.as_view()), #생성 POST
+#    path('content/<int:pk>', views.ContentsView.as_view()), #조회, 수정 
+    path('content/<str:username>', views.ContentView.as_view()),
+#    path('content/<str:username>/follow'),#팔로우 유저 목록
 #   path('content/<int:pk>/to_clear') 삭제 DEL
     path('content/comment', views.CommetView.as_view()), #생성 POST
 #   path('content/<int:pk>/comment/<int:pk>') 수정 PUT

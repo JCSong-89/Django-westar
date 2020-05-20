@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\account",
-    "\\feeds",
     "\\posts",
     "\\westar"
   ],
-  "SelectedNode": "\\posts\\views.py",
+  "SelectedNode": "\\account\\views.py",
   "PreviewInSolutionExplorer": false
 }
