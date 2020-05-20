@@ -74,7 +74,7 @@ class UserLoginView(View):
                              'exp': 600000
                             }
                 encoded_token = jwt.encode(dic_user, TOKEN_SECRECTKEY, algorithm=ALGORITHMS)
-                return JsonResponse({'Authorization':encoded_token.decode("utf-8")}, status = 200)
+                return JsonResponse({'Authorization':encoded_token.decode("utf-8"), "username":user.username}, status = 200)
             except:
                 return HttpResponse(status=400)
 

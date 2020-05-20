@@ -1,12 +1,11 @@
 
-#모바일용 유저 포스트 확인 기능
 #class ContentsView(View):
 #    def get(self, request, pk):
 #        content = Content.objects.filter(pk=pk).values('comment','description','createdAt','id','user')
 #        contetns = customDef.show_content(content, pk)
 #        return JsonResponse({"data":contetns}, status = 200)
 
-#모바일용 유저 FeedView
+
 #class UserFeedView(View):
 #    def get(self, request):
 #        if 'Authorization' not in request.headers:
